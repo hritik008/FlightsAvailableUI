@@ -1,0 +1,23 @@
+<div style="text-align: center;">
+    <h1>Login</h1>
+</div>
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
+    <div class="text-center">
+        <img src="assets/images/user.png" class="img-fluid rounded-circle my-3" width="200px" alt="userImage">
+    </div>
+
+    <div class="form-group mb-10">
+        <label>Username: </label><br>
+        <input type="text" name="user" formControlName="user" ><br>
+        <span class="text-danger" col *ngIf="user && user.invalid && user.touched">This field is invalid</span>
+    </div>
+    <div class="form-group mb-10">    
+        <label>Password: </label><br>
+        <input type="password" name="password" formControlName="password"><br>
+        <span class="text-danger" col *ngIf="password && password.invalid && password.touched">This field is invalid</span>
+    </div>
+    <div class="form-group mb-10"> 
+        <button [disabled]="loginForm.invalid" class="btn btn-primary" type="submit">Login</button>
+    </div>
+</form>

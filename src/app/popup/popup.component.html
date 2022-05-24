@@ -1,0 +1,60 @@
+<div class="modal-header">
+    <h4 class="modal-title w-100 text-center" >Booking Details</h4>
+    <button type="button" class="btn-close" aria-describedby="modal-title" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <img src="{{'assets/images/'+ selectedFlight.logo}}" width="100" height="100" class="img-thumbnail mx-auto d-block mb-3" >
+  
+    <div class="row">
+        <div class="col-4">
+            <h6>Flight Name :</h6>
+        </div>
+        <div class="col">
+            {{selectedFlight.flightName}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h6>From :</h6>
+        </div>
+        <div class="col">
+            ({{selectedFlight.currentSmall}}) {{selectedFlight.currentLong}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h6>To :</h6>
+        </div>
+        <div class="col">
+            ({{selectedFlight.destSmall}}) {{selectedFlight.destLong}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h6>Departure Time :</h6>
+        </div>
+        <div class="col">
+            {{selectedFlight.departure}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h6>Arrival Time :</h6>
+        </div>
+        <div class="col">
+            {{selectedFlight.arrival}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h6>Ticket Price :</h6>
+        </div>
+        <div class="col">
+            {{selectedFlight.ticketCost}}
+        </div>
+    </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('cancel click')">Cancel</button>
+    <button type="button" class="btn btn-success" (click)="activeModal.close('Ok click')">PAY</button>
+  </div>
+</div>

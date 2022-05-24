@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="conatainer-fluid px-2">
+        <p>Sort By</p>
+        <div class="conatainer-fluid bg-white rounded">
+            <div class="row text-center py-3">
+                <div class="col">
+                    <a type="button" style="font-weight: 600" (click)="selected(1)" [class.active]="isActive===1">
+                    DEPARTURE &#8593;&#8595;</a>
+                </div>
+                <div class="col">
+                    <a type="button" style="font-weight: 600" (click)="selected(2)" [class.active]="isActive===2">
+                    DURATION &#8593;&#8595;</a>
+                </div>
+                <div class="col">
+                    <a type="button" style="font-weight: 600" (click)="selected(3)" [class.active]="isActive===3">
+                    ARRIVAL &#8593;&#8595;</a>
+                </div>
+                <div class="col">
+                    <a type="button" style="font-weight: 600" (click)="selected(4)" [class.active]="isActive===4">
+                    PRICE &#8593;&#8595;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-flight-available></app-flight-available>
+</div>
